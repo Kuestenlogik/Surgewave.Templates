@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageId>Kuestenlogik.Surgewave.Templates</PackageId>
+    <Title>Surgewave Project Templates</Title>
+    <Description>dotnet new templates for Surgewave messaging applications. Includes producer, consumer, worker, ASP.NET Core, streams, and connector templates.</Description>
+    <PackageTags>surgewave;kafka;templates;dotnet-new;messaging;streaming</PackageTags>
+    <TargetFramework>net10.0</TargetFramework>
+
+    <!-- Template package settings -->
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+
+    <!-- Package metadata -->
+    <Authors>Kuestenlogik</Authors>
+    <Company>Kuestenlogik</Company>
+    <Copyright>Copyright (c) 2026 Küstenlogik</Copyright>
+    <RepositoryUrl>https://github.com/Kuestenlogik/Surgewave.Templates</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Kuestenlogik/Surgewave.Templates</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="content/**/*" Exclude="**/bin/**;**/obj/**" />
+    <Compile Remove="**/*" />
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

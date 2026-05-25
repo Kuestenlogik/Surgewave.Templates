@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Küstenlogik",
+  "classifications": ["Surgewave", "Kafka", "Connect", "Connector", "Library"],
+  "identity": "Kuestenlogik.Surgewave.Connect.Connector",
+  "name": "Surgewave Connector",
+  "shortName": "surgewave-connect",
+  "description": "A custom Surgewave/Kafka Connect connector plugin",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "MyConnectorPlugin",
+  "preferNameDirectory": true,
+  "symbols": {
+    "connectorType": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [
+        { "choice": "source", "description": "Source connector (reads from external system)" },
+        { "choice": "sink", "description": "Sink connector (writes to external system)" }
+      ],
+      "defaultValue": "source",
+      "description": "The type of connector to create"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(connectorType == 'sink')",
+          "exclude": ["MySourceTask.cs"]
+        },
+        {
+          "condition": "(connectorType == 'source')",
+          "exclude": ["MySinkTask.cs"]
+        }
+      ]
+    }
+  ]
+}

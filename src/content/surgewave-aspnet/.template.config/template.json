@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Küstenlogik",
+  "classifications": ["Surgewave", "Kafka", "Messaging", "Web", "ASP.NET"],
+  "identity": "Kuestenlogik.Surgewave.AspNet",
+  "name": "Surgewave ASP.NET Core",
+  "shortName": "surgewave-aspnet",
+  "description": "An ASP.NET Core web application with Surgewave producer/consumer integration",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "SurgewaveWebAppTemplate",
+  "preferNameDirectory": true,
+  "symbols": {
+    "topic": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "my-topic",
+      "description": "The default topic for messaging",
+      "replaces": "my-topic"
+    },
+    "bootstrapServers": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "localhost:9092",
+      "description": "The Surgewave/Kafka bootstrap servers",
+      "replaces": "localhost:9092"
+    }
+  }
+}

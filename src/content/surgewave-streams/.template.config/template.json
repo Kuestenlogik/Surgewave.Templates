@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Küstenlogik",
+  "classifications": ["Surgewave", "Kafka", "Messaging", "Streams", "Console"],
+  "identity": "Kuestenlogik.Surgewave.Streams",
+  "name": "Surgewave Streams Application",
+  "shortName": "surgewave-streams",
+  "description": "A stream processing application using Surgewave Streams",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "SurgewaveStreamsAppTemplate",
+  "preferNameDirectory": true,
+  "symbols": {
+    "inputTopic": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "input-topic",
+      "description": "The input topic to consume from",
+      "replaces": "input-topic"
+    },
+    "outputTopic": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "output-topic",
+      "description": "The output topic to produce to",
+      "replaces": "output-topic"
+    },
+    "bootstrapServers": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "localhost:9092",
+      "description": "The Surgewave/Kafka bootstrap servers",
+      "replaces": "localhost:9092"
+    }
+  }
+}

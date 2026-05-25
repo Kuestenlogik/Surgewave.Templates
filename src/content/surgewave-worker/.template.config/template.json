@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Küstenlogik",
+  "classifications": ["Surgewave", "Kafka", "Messaging", "Worker", "BackgroundService"],
+  "identity": "Kuestenlogik.Surgewave.Worker",
+  "name": "Surgewave Worker Service",
+  "shortName": "surgewave-worker",
+  "description": "A background worker service that processes messages from a Surgewave/Kafka broker",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "SurgewaveWorkerApp",
+  "preferNameDirectory": true,
+  "symbols": {
+    "topic": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "my-topic",
+      "description": "The topic to consume messages from",
+      "replaces": "my-topic"
+    },
+    "groupId": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "my-worker-group",
+      "description": "The consumer group ID",
+      "replaces": "my-worker-group"
+    },
+    "bootstrapServers": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "localhost:9092",
+      "description": "The Surgewave/Kafka bootstrap servers",
+      "replaces": "localhost:9092"
+    }
+  }
+}

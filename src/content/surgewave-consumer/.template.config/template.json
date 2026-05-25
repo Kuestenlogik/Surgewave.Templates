@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Küstenlogik",
+  "classifications": ["Surgewave", "Kafka", "Messaging", "Console"],
+  "identity": "Kuestenlogik.Surgewave.Consumer",
+  "name": "Surgewave Consumer",
+  "shortName": "surgewave-consumer",
+  "description": "A console application that receives messages from a Surgewave/Kafka broker",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "SurgewaveConsumerApp",
+  "preferNameDirectory": true,
+  "symbols": {
+    "topic": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "my-topic",
+      "description": "The topic to consume messages from",
+      "replaces": "my-topic"
+    },
+    "groupId": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "my-consumer-group",
+      "description": "The consumer group ID",
+      "replaces": "my-consumer-group"
+    },
+    "bootstrapServers": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "localhost:9092",
+      "description": "The Surgewave/Kafka bootstrap servers",
+      "replaces": "localhost:9092"
+    }
+  }
+}

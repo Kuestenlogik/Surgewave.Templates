@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Küstenlogik",
+  "classifications": ["Surgewave", "Kafka", "Messaging", "Console"],
+  "identity": "Kuestenlogik.Surgewave.Producer",
+  "name": "Surgewave Producer",
+  "shortName": "surgewave-producer",
+  "description": "A console application that sends messages to a Surgewave/Kafka broker",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "SurgewaveProducerApp",
+  "preferNameDirectory": true,
+  "symbols": {
+    "topic": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "my-topic",
+      "description": "The topic to produce messages to",
+      "replaces": "my-topic"
+    },
+    "bootstrapServers": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "localhost:9092",
+      "description": "The Surgewave/Kafka bootstrap servers",
+      "replaces": "localhost:9092"
+    }
+  }
+}

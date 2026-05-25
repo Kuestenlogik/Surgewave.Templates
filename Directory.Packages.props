@@ -1,0 +1,9 @@
+<Project>
+  <!-- Central Package Version Management -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- No direct package dependencies - template content references packages via their own csproj files -->
+  </ItemGroup>
+</Project>

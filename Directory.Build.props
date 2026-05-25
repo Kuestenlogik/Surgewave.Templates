@@ -1,0 +1,44 @@
+<Project>
+  <!-- Common properties for all template/deploy projects -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>14.0</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AnalysisLevel>latest-all</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>$(NoWarn);CA1027;CA1720;CA1716;CA1815;CA2227;NU1510;NU1902</NoWarn>
+  </PropertyGroup>
+
+  <!-- Centralized build output paths -->
+  <PropertyGroup>
+    <ArtifactsPath>$(MSBuildThisFileDirectory)artifacts\</ArtifactsPath>
+    <BaseIntermediateOutputPath>$(ArtifactsPath)obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\</IntermediateOutputPath>
+    <BaseOutputPath>$(ArtifactsPath)bin\$(MSBuildProjectName)\</BaseOutputPath>
+    <OutputPath>$(BaseOutputPath)$(Configuration)\</OutputPath>
+    <PackageOutputPath>$(ArtifactsPath)packages\</PackageOutputPath>
+    <PublishDir>$(ArtifactsPath)publish\$(MSBuildProjectName)\$(Configuration)\</PublishDir>
+  </PropertyGroup>
+
+  <!-- Common metadata for NuGet packages -->
+  <PropertyGroup Condition="'$(IsPackable)' != 'false'">
+    <Authors>Kuestenlogik</Authors>
+    <Company>Kuestenlogik</Company>
+    <Copyright>Copyright (c) 2026 Küstenlogik</Copyright>
+    <PackageTags>surgewave;templates;dotnet-new</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Kuestenlogik/Surgewave.Templates</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Kuestenlogik/Surgewave.Templates</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <!-- Version information -->
+  <PropertyGroup Condition="'$(IsPackable)' != 'false'">
+    <Version>0.1.0</Version>
+    <AssemblyVersion>0.1.0</AssemblyVersion>
+    <FileVersion>0.1.0</FileVersion>
+  </PropertyGroup>
+
+</Project>
