@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Kuestenlogik.Surgewave.Client" Version="0.1.*" />
-    <PackageReference Include="Kuestenlogik.Surgewave.Streams" Version="0.1.*" />
+    <PackageReference Include="Kuestenlogik.Surgewave.Client" Version="0.3.0" />
+    <PackageReference Include="Kuestenlogik.Surgewave.Streams" Version="0.3.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.*" />
   </ItemGroup>
 
